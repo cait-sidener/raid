@@ -1,9 +1,11 @@
-<div *ngFor='let agreementInfo of agreementInfo$'>
+<div *ngFor='let agreementInfo of agreementInfo$' class='flex flex-col'>
 	<form>
 		<mat-form-field appearance='fill' class='mx-3'>
-			<input matInput disabled value='{{agreementInfo.railroadCompany}}'>
+			<input matInput ng-readonly='all' value='{{agreementInfo.railroadCompany}}'>
 			<mat-hint>Railroad Company</mat-hint>
 		</mat-form-field>
+
+
 		<mat-form-field class='mx-3 '>
 			<input matInput disabled value='{{agreementInfo.section}}'>
 
