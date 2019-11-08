@@ -1,0 +1,47 @@
+<div style="border: 1rem solid #0094ff">
+	<h1>Employee List: {{filteredEmployees.length}}</h1>
+	{{test()}}
+	<p>This component demonstrates fetching data from an external webhost.</p>
+	<p>Table is tracked by the ID, observe Elements tab of chrome DevTools.</p>
+
+	<div *ngIf="employees && employees.length; else noContent" style="display:flex;">
+		<button (click)="toggleEmployees()">{{showEmployees ? 'Hide' : 'Show'}} Employees</button>
+		<button *ngIf="showEmployees" (click)="refreshEmployees()">Refresh</button>
+		<button *ngIf="showEmployees" (click)="shuffleEmployees()">Shuffle</button>
+	</div>
+	<div *ngIf="showEmployees" style="margin-top: 0.5rem;">
+		<input [(ngModel)]="listFilter" type="text" placeholder="Name Filter" />
+		<h4 *ngIf="listFilter">Name Filtered by: {{listFilter}}</h4>
+		<table>
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Name</th>
+					<th>User</th>
+					<th>Email</th>
+					<th>Address</th>
+					<th>City</th>
+					<th>Phone</th>
+					<th>Company</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!--TrackBy improves performace by telling Angular what it needs to redraw when the list data is refreshed.-->
+				<tr *ngFor="let employee of filteredEmployees; trackBy: trackById" [routerLink]="['/employees', employee.id]">
+					<td>{{employee.id}}</td>
+					<td>{{employee.name}}</td>
+					<td>{{employee.username}}</td>
+					<td>{{employee.email}}</td>
+					<td>{{employee.address.street}}</td>
+					<td>{{employee.address.city}}</td>
+					<td>{{employee.phone | convertToSpaces: '-'}}</td>
+					<td>{{employee.company.name}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<h6 *ngIf="employees" style="text-align: right; margin: 0.25rem;">Last Updated: {{ lastUpdated | date:'HH:mm:ss' }}</h6>
+	<ng-template #noContent>
+		<h4>Requesting Employee Data..</h4>
+	</ng-template>
+</div>

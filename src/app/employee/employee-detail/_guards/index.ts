@@ -1,0 +1,1 @@
+export { InvalidIDCanActivateGuard } from './invalid-id.can-activate.guard';

@@ -1,0 +1,9 @@
+<div id="modal" class="modal" (click)="closeModal($event);">
+	{{test()}}
+	<div class="modal-dialog">
+		<div class="modal-content" [class.modal-full]="isFullPage" style="background-color: white">
+			<ng-content></ng-content>
+			<div id="modal-content"></div>
+		</div>
+	</div>
+</div>

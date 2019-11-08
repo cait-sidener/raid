@@ -1,0 +1,28 @@
+<div style="border: 1rem solid #00ff90">
+	<h1>Weather Forecasts</h1>
+	{{test()}}
+	<p>This component demonstrates fetching data from the local webhost. (API delayed by 3-6 seconds, Client polls every 10 seconds.)</p>
+
+	<table *ngIf="forecasts; else noContent">
+		<thead>
+			<tr>
+				<th>Date</th>
+				<th>Temp. (C)</th>
+				<th>Temp. (F)</th>
+				<th>Summary</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let forecast of forecasts">
+				<td>{{ forecast.dateFormatted }}</td>
+				<td>{{ forecast.temperatureC }}</td>
+				<td>{{ forecast.temperatureF }}</td>
+				<td>{{ forecast.summary }}</td>
+			</tr>
+		</tbody>
+	</table>
+	<h6 *ngIf="forecasts" style="text-align: right; margin: 0.25rem;">Last Updated: {{ lastUpdated | date:'HH:mm:ss' }}</h6>
+	<ng-template #noContent>
+		<h4>Requesting Weather Data..</h4>
+	</ng-template>
+</div>

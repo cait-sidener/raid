@@ -1,0 +1,22 @@
+table {
+	border-collapse: collapse;
+}
+
+thead {
+	color: #337AB7;
+}
+
+th,
+td {
+	padding: 0.25rem;
+	border-left: 1px solid;
+	border-bottom: 1px solid;
+}
+
+tbody tr {
+	cursor: pointer;
+}
+
+	tbody tr:hover {
+		background-color: lightblue;
+	}

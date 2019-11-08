@@ -1,0 +1,14 @@
+<div style="border: 1rem solid #ed00ff">
+	<button (click)="onBack()">Back</button>
+	<h1>Employee Details: {{id}}</h1>
+	{{test()}}
+	<div *ngIf="employee">
+		<div>Name: {{employee.name}}</div>
+		<div>User: {{employee.username}}</div>
+		<div>Email: {{employee.email}}</div>
+		<div>Street: {{employee.address.street}}</div>
+		<div>City: {{employee.address.city}}</div>
+		<div>Phone: {{employee.phone | convertToSpaces: '-'}}</div>
+		<div>Company: {{employee.company.name}}</div>
+	</div>
+</div>

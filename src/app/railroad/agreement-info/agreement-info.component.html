@@ -1,0 +1,100 @@
+<div *ngFor='let agreementInfo of agreementInfo$'>
+	<form>
+		<mat-form-field appearance='fill' class='mx-3'>
+			<input matInput disabled value='{{agreementInfo.railroadCompany}}'>
+			<mat-hint>Railroad Company</mat-hint>
+		</mat-form-field>
+		<mat-form-field class='mx-3 '>
+			<input matInput disabled value='{{agreementInfo.section}}'>
+
+		</mat-form-field>
+		<mat-form-field class='mx-3 '>
+			<input matInput disabled value='{{agreementInfo.agreementNumber}}'>
+			<mat-hint>Agreement Number</mat-hint>
+		</mat-form-field>
+		<mat-form-field class='mx-3 '>
+			<input matInput>
+			{{agreementInfo.location}}
+		</mat-form-field>
+		<mat-form-field class='mx-3 '>
+			<input matInput>
+			{{agreementInfo.county}}
+		</mat-form-field>
+		<mat-form-field class='mx-3 '>
+			<input matInput>
+			{{agreementInfo.route}}
+		</mat-form-field>
+		<mat-form-field class='mx-3 '>
+			<input matInput>
+			{{agreementInfo.spotRoute}}
+		</mat-form-field>
+		<mat-form-field class='mx-3 '>
+			<input matInput>
+			{{agreementInfo.lastAgreementDate}}
+		</mat-form-field>
+		<mat-form-field class='mx-3 '>
+			<input matInput>
+			{{agreementInfo.lastAgreementDuration}}
+		</mat-form-field>
+		<mat-form-field class='mx-3 '>
+			<input matInput>
+			{{agreementInfo.lastAgreementExp}}
+		</mat-form-field>
+		<mat-form-field class='mx-3 '>
+			<input matInput>
+			{{agreementInfo.rentAmount}}
+		</mat-form-field>
+		<mat-form-field class='mx-3 '>
+			<input matInput>
+			{{agreementInfo.leasePurpose}}
+		</mat-form-field>
+		<mat-form-field class='mx-3 '>
+			<input matInput>
+			{{agreementInfo.description}}
+		</mat-form-field>
+		<mat-form-field class='mx-3 '>
+			<input matInput>
+			{{agreementInfo.cdNumber}}
+		</mat-form-field>
+		<mat-form-field class='mx-3 '>
+			<input matInput>
+			{{agreementInfo.auditNumber}}
+		</mat-form-field>
+		<mat-form-field class='mx-3 '>
+			<input matInput>
+			{{agreementInfo.ldNumber}}
+		</mat-form-field>
+		<mat-form-field class='mx-3 '>
+			<input matInput>
+			{{agreementInfo.highwayStatus}}
+		</mat-form-field>
+		<mat-form-field class='mx-3 '>
+			<input matInput>
+			{{agreementInfo.plansMarked}}
+		</mat-form-field>
+		<mat-form-field class='mx-3 '>
+			<input matInput>
+			{{agreementInfo.pk}}
+		</mat-form-field>
+		<mat-form-field class='mx-3 '>
+			<input matInput>
+			{{agreementInfo.fk}}
+		</mat-form-field>
+		<mat-form-field class='mx-3 '>
+			<input matInput>
+			{{agreementInfo.createdBy}}
+		</mat-form-field>
+		<mat-form-field class='mx-3 '>
+			<input matInput>
+			{{agreementInfo.createdOn}}
+		</mat-form-field>
+		<mat-form-field class='mx-3 '>
+			<input matInput>
+			{{agreementInfo.modifiedBy}}
+		</mat-form-field>
+		<mat-form-field class='mx-3 '>
+			<input matInput>
+			{{agreementInfo.modifiedOn}}
+		</mat-form-field>
+	</form>
+</div>
